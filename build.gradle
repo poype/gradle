@@ -17,3 +17,28 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+// 配置阶段开始前的监听回调
+this.beforeEvaluate {
+    println 'configuration start.....'
+}
+
+// 配置阶段完成后的监听回调
+this.afterEvaluate {
+    println 'configuration finish.....'
+}
+
+// gradle执行完毕后的回调监听, 任何task(clean,build)都会执行
+this.gradle.buildFinished {
+    println 'execute finish....'
+}
+
+// 等同于beforeEvaluate
+this.gradle.beforeProject {
+    println 'Poype gradle.beforeProject ...'
+}
+
+// 等同于afterEvaluate
+this.gradle.afterProject {
+    println 'Poype gradle.afterProject ...'
+}

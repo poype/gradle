@@ -1,0 +1,9 @@
+Gradle生命周期：
+1. Initialization
+2. Configuration
+3. Execution
+
+初始化阶段执行的就是settings.gradle文件内容
+其它阶段执行的就是build.gradle文件中的内容
+
+执行build或clean时执行的都是一个个Task

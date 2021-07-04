@@ -7,3 +7,6 @@ Gradle生命周期：
 其它阶段执行的就是build.gradle文件中的内容
 
 执行build或clean时执行的都是一个个Task
+
+project:
+在Gradle中，整个项目叫做project，项目下的每个module(包含build.gradle文件)也叫做project

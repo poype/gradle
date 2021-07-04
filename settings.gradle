@@ -1,4 +1,6 @@
 rootProject.name = 'studyGradle'
 
+include 'sub1'
+
 // 初始化阶段执行的就是settings.gradle
 println 'Initialization start......'

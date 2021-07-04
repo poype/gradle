@@ -45,3 +45,10 @@ testProperties()
 println getRootDir()
 println getBuildDir()
 println getProjectDir()
+
+def getContent() {
+    def file = file('../gradlew')
+    println file.getText()
+}
+
+getContent()

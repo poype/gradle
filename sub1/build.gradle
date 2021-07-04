@@ -27,3 +27,17 @@ def print() {
     println this.rootProject.testVersion
 }
 print()
+
+
+def testProperties() {
+    println '******************'
+    println this.boolValue.class // properties文件中定义的都是字符串，所以要明确转为boolean值
+    if (this.boolValue.toBoolean()) {
+        println 'boolValue is true'
+    } else {
+        println 'boolValue is false'
+    }
+    println this.strValue
+}
+
+testProperties()

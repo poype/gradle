@@ -41,3 +41,7 @@ def testProperties() {
 }
 
 testProperties()
+
+println getRootDir()
+println getBuildDir()
+println getProjectDir()

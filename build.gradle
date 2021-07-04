@@ -77,3 +77,6 @@ ext {
     testVersion = 100
     testName = 'Name in rootProject'
 }
+
+println '22222222222222222'
+println getBuildDir()

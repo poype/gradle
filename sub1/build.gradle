@@ -17,3 +17,13 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+// root project中所有的属性会被sub project继承，可以省略rootProject
+def print() {
+    println 'aaaaaaaaaaaaaaaa'
+    println this.testName
+    println this.testVersion
+    println this.rootProject.testName
+    println this.rootProject.testVersion
+}
+print()

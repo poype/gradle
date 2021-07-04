@@ -71,3 +71,9 @@ allprojects {
 subprojects {
 
 }
+
+// 定义拓展属性
+ext {
+    testVersion = 100
+    testName = 'Name in rootProject'
+}

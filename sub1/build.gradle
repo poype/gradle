@@ -46,14 +46,21 @@ println getRootDir()
 println getBuildDir()
 println getProjectDir()
 
-def getContent() {
-    def file = file('../gradlew')
-    println file.getText()
-}
+//def getContent() {
+//    def file = file('../gradlew')
+//    println file.getText()
+//}
 
-getContent()
+//getContent()
 
 copy {
     from file('./build.gradle')
     into getProject().getBuildDir()
+}
+
+println '00000000000000000000000'
+fileTree('.') {FileTree tree ->
+    tree.visit {FileTreeElement element ->
+        println element.name + " " + element.file.directory
+    }
 }

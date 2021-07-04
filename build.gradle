@@ -42,3 +42,32 @@ this.gradle.beforeProject {
 this.gradle.afterProject {
     println 'Poype gradle.afterProject ...'
 }
+
+def getProjects() {
+    println '--------------------'
+    println 'Poype Project'
+    println '--------------------'
+    this.getAllprojects().eachWithIndex { Project project, int index ->
+        if (index == 0) {
+            println "Root project ':${project.name}'"
+        } else {
+            println "+=== project ':${project.name}'"
+        }
+    }
+}
+this.getProjects()  // 调用方法, 该方法会在configuration阶段被执行
+
+// 直接操作子project
+this.project('sub1') {Project project ->
+    println "Test Project ${project.name}  ............"
+}
+
+// 在一个地方对所有的工程进行配置
+allprojects {
+
+}
+
+// 一次性配置所有的子工程
+subprojects {
+
+}

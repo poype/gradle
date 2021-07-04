@@ -10,6 +10,8 @@ Gradle生命周期：
 
 project:
 在Gradle中，整个项目叫做project，项目下的每个module(包含build.gradle文件)也叫做project
+在build.gradle中写的所有逻辑都相当于写在一个project类内部，所以this就是指project
+
 
 API：
 1. gradle生命周期API

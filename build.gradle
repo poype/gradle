@@ -113,3 +113,9 @@ task taskZ(dependsOn: taskY) {
         println 'task ZZZZZZZZ'
     }
 }
+
+task taskU(dependsOn: [taskX, taskY, taskZ]) {
+    doLast {
+        println 'task UUUUUUUU'
+    }
+}

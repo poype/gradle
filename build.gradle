@@ -95,3 +95,21 @@ task('firstTask') {
         }
     }
 }
+
+task taskX {
+    doLast {
+        println 'task XXXXXXXX'
+    }
+}
+
+task taskY(dependsOn: taskX) {
+    doLast {
+        println 'task YYYYYYYY'
+    }
+}
+
+task taskZ(dependsOn: taskY) {
+    doLast {
+        println 'task ZZZZZZZZ'
+    }
+}

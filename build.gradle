@@ -80,3 +80,18 @@ ext {
 
 println '22222222222222222'
 println getBuildDir()
+
+// 在执行阶段执行
+task('firstTask') {
+    doLast {
+        exec {
+            try {
+                executable 'bash'
+                args '-c', 'echo 333poype'
+                println 'execute success'
+            } catch (GradleException e) {
+                println 'execute success'
+            }
+        }
+    }
+}
